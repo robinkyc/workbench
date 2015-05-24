@@ -13,6 +13,24 @@ class WorkbenchServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	/**
+	 * Boot the package.
+	 * 
+	 * @return void
+	 */
+	public function boot()
+	{
+		$path = config_path('workbench.php');
+
+		$this->publishes([
+			__DIR__ . '/config.php' => $path
+		], 'config');
+
+		if (file_exists($path)) {
+			$this->mergeConfigFrom($path, 'workbench');
+		}
+	}
+
+	/**
 	 * Register the service provider.
 	 *
 	 * @return void
