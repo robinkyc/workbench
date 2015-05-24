@@ -39,13 +39,15 @@ if (is_dir($workbench = __DIR__.'/../workbench'))
 
 ### Creating A Package
 
+> Before you create a package, you need to update `name` and `email` config value in your `config/workbench.php` file. 
+
 Creating a basic package.
 
 ```
 php artisan workbench vendor/package
 ```
 
-Creating a package with including some scaffold resources.
+Creating a package with generating some scaffold resources.
 
 ```
 php artisan workbench vendor/package --resources
