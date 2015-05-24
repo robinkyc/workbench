@@ -1,4 +1,4 @@
-<?php namespace Illuminate\Workbench;
+<?php namespace Pingpong\Workbench;
 
 class Package {
 

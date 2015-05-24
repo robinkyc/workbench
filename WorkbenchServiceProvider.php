@@ -1,7 +1,7 @@
-<?php namespace Illuminate\Workbench;
+<?php namespace Pingpong\Workbench;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Workbench\Console\WorkbenchMakeCommand;
+use Pingpong\Workbench\Console\WorkbenchMakeCommand;
 
 class WorkbenchServiceProvider extends ServiceProvider {
 
