@@ -1,6 +1,6 @@
 {
     "name": "illuminate/workbench",
-    "description": "The Illuminate Workbench package.",
+    "description": "Laravel 5 Workbench.",
     "license": "MIT",
     "authors": [
         {
