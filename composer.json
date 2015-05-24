@@ -6,6 +6,10 @@
         {
             "name": "Taylor Otwell",
             "email": "taylorotwell@gmail.com"
+        },
+        {
+            "name": "Pingpong Labs",
+            "email": "pingpong.labs@gmail.com"
         }
     ],
     "require": {
