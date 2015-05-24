@@ -18,7 +18,9 @@ class {{name}}ServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
+		$this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', '{{lower_name}}');
+
+		$this->loadViewsFrom(__DIR__ . '/../../resources/views', '{{lower_name}}');
 	}
 
 	/**
