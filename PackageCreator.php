@@ -188,7 +188,7 @@ class PackageCreator {
 	 */
 	public function writeSupportDirectories(Package $package, $directory)
 	{
-		foreach (array('config', 'controllers', 'lang', 'migrations', 'views') as $support)
+		foreach (array('config', 'resources/lang', 'migrations', 'resources/views') as $support)
 		{
 			$this->writeSupportDirectory($package, $support, $directory);
 		}
