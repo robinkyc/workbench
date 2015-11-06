@@ -135,7 +135,7 @@ class WorkbenchMakeCommand extends Command
     protected function getOptions()
     {
         return array(
-            array('resources', null, InputOption::VALUE_NONE, 'Create Laravel specific directories.'),
+            array('resources', 'r', InputOption::VALUE_NONE, 'Create Laravel specific directories.'),
         );
     }
 }
