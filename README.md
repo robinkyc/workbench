@@ -16,6 +16,8 @@ And the last, publish the package's configuration by running:
 php artisan vendor:publish
 ```
 
+That will publish the `workbench.php` config file to your `config/` folder and you need to set the name and email of package creators on it. 
+
 ## Autoloading Workbench
 
 You can autoload the workbench by adding this following command to your `bootstrap/autoload.php` file. Put this following command at the very bottom of script.
