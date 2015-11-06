@@ -1,9 +1,11 @@
-<?php namespace {{vendor}}\{{name}};
+<?php
+
+namespace {{vendor}}\{{name}};
 
 use Illuminate\Support\ServiceProvider;
 
-class {{name}}ServiceProvider extends ServiceProvider {
-
+class {{name}}ServiceProvider extends ServiceProvider
+{
 	/**
 	 * Indicates if loading of the provider is deferred.
 	 *
