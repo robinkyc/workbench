@@ -2,7 +2,7 @@
 
 ### Installation
 
-You can install the package via composer command line by runnign this following command.
+You can install the package via composer command line by running this following command.
 
 ```
 composer require pingpong/workbench
