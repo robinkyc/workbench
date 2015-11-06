@@ -1,8 +1,9 @@
-<?php namespace Pingpong\Workbench;
+<?php
+
+namespace Pingpong\Workbench;
 
 class Package
 {
-
     /**
      * The vendor name of the package.
      *
@@ -48,11 +49,10 @@ class Package
     /**
      * Create a new package instance.
      *
-     * @param  string  $vendor
-     * @param  string  $name
-     * @param  string  $author
-     * @param  string  $email
-     * @return void
+     * @param string $vendor
+     * @param string $name
+     * @param string $author
+     * @param string $email
      */
     public function __construct($vendor, $name, $author, $email)
     {

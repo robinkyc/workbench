@@ -1,4 +1,6 @@
-<?php namespace Pingpong\Workbench\Console;
+<?php
+
+namespace Pingpong\Workbench\Console;
 
 use Illuminate\Console\Command;
 use Pingpong\Workbench\Package;
@@ -8,7 +10,6 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class WorkbenchMakeCommand extends Command
 {
-
     /**
      * The console command name.
      *
@@ -33,8 +34,7 @@ class WorkbenchMakeCommand extends Command
     /**
      * Create a new make workbench command instance.
      *
-     * @param  \Pingpong\Workbench\PackageCreator  $creator
-     * @return void
+     * @param \Pingpong\Workbench\PackageCreator $creator
      */
     public function __construct(PackageCreator $creator)
     {
@@ -45,8 +45,6 @@ class WorkbenchMakeCommand extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return void
      */
     public function fire()
     {
@@ -60,14 +58,15 @@ class WorkbenchMakeCommand extends Command
     /**
      * Run the package creator class for a given Package.
      *
-     * @param  \Pingpong\Workbench\Package  $package
+     * @param \Pingpong\Workbench\Package $package
+     *
      * @return string
      */
     protected function runCreator($package)
     {
         $path = $this->laravel['path.base'].'/workbench';
 
-        $plain = ! $this->option('resources');
+        $plain = !$this->option('resources');
 
         return $this->creator->create($package, $path, $plain);
     }
@@ -75,8 +74,7 @@ class WorkbenchMakeCommand extends Command
     /**
      * Call the composer update routine on the path.
      *
-     * @param  string  $path
-     * @return void
+     * @param string $path
      */
     protected function callComposerUpdate($path)
     {

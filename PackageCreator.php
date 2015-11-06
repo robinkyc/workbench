@@ -1,10 +1,11 @@
-<?php namespace Pingpong\Workbench;
+<?php
+
+namespace Pingpong\Workbench;
 
 use Illuminate\Filesystem\Filesystem;
 
 class PackageCreator
 {
-
     /**
      * The filesystem instance.
      *
@@ -39,8 +40,7 @@ class PackageCreator
     /**
      * Create a new package creator instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
-     * @return void
+     * @param \Illuminate\Filesystem\Filesystem $files
      */
     public function __construct(Filesystem $files)
     {
@@ -50,9 +50,10 @@ class PackageCreator
     /**
      * Create a new package stub.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $path
-     * @param  bool    $plain
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $path
+     * @param bool                          $plain
+     *
      * @return string
      */
     public function create(Package $package, $path, $plain = true)
@@ -72,9 +73,8 @@ class PackageCreator
     /**
      * Create a package with all resource directories.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $path
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $path
      */
     public function createWithResources(Package $package, $path)
     {
@@ -84,7 +84,8 @@ class PackageCreator
     /**
      * Get the blocks for a given package.
      *
-     * @param  bool $plain
+     * @param bool $plain
+     *
      * @return array
      */
     protected function getBlocks($plain)
@@ -95,10 +96,9 @@ class PackageCreator
     /**
      * Write the support files to the package root.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @param  bool    $plain
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
+     * @param bool                          $plain
      */
     public function writeSupportFiles(Package $package, $directory, $plain)
     {
@@ -110,9 +110,8 @@ class PackageCreator
     /**
      * Write the PHPUnit stub file.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
      */
     protected function writePhpUnitFile(Package $package, $directory)
     {
@@ -124,9 +123,8 @@ class PackageCreator
     /**
      * Write the Travis stub file.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
      */
     protected function writeTravisFile(Package $package, $directory)
     {
@@ -138,10 +136,9 @@ class PackageCreator
     /**
      * Write the Composer.json stub file.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @param  bool    $plain
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
+     * @param bool                          $plain
      */
     protected function writeComposerFile(Package $package, $directory, $plain)
     {
@@ -155,7 +152,8 @@ class PackageCreator
     /**
      * Get the Composer.json stub file contents.
      *
-     * @param  bool  $plain
+     * @param bool $plain
+     *
      * @return string
      */
     protected function getComposerStub($plain)
@@ -170,10 +168,9 @@ class PackageCreator
     /**
      * Write the stub .gitignore file for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @param  bool    $plain
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
+     * @param bool                          $plain
      */
     public function writeIgnoreFile(Package $package, $directory, $plain)
     {
@@ -183,9 +180,8 @@ class PackageCreator
     /**
      * Create the support directories for a package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
      */
     public function writeSupportDirectories(Package $package, $directory)
     {
@@ -197,10 +193,9 @@ class PackageCreator
     /**
      * Write a specific support directory for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $support
-     * @param  string  $directory
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $support
+     * @param string                        $directory
      */
     protected function writeSupportDirectory(Package $package, $support, $directory)
     {
@@ -217,10 +212,9 @@ class PackageCreator
     /**
      * Create the public directory for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @param  bool    $plain
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
+     * @param bool                          $plain
      */
     public function writePublicDirectory(Package $package, $directory, $plain)
     {
@@ -236,9 +230,8 @@ class PackageCreator
     /**
      * Create the test directory for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
      */
     public function writeTestDirectory(Package $package, $directory)
     {
@@ -250,10 +243,9 @@ class PackageCreator
     /**
      * Write the stub ServiceProvider for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @param  bool    $plain
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
+     * @param bool                          $plain
      */
     public function writeServiceProvider(Package $package, $directory, $plain)
     {
@@ -268,10 +260,9 @@ class PackageCreator
     /**
      * Write the service provider stub for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
-     * @param  string  $stub
-     * @return void
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
+     * @param string                        $stub
      */
     protected function writeProviderStub(Package $package, $directory, $stub)
     {
@@ -288,8 +279,9 @@ class PackageCreator
     /**
      * Get the stub for a ServiceProvider.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  bool  $plain
+     * @param \Illuminate\Workbench\Package $package
+     * @param bool                          $plain
+     *
      * @return string
      */
     protected function getProviderStub(Package $package, $plain)
@@ -300,7 +292,8 @@ class PackageCreator
     /**
      * Load the raw service provider file.
      *
-     * @param  bool  $plain
+     * @param bool $plain
+     *
      * @return string
      */
     protected function getProviderFile($plain)
@@ -315,15 +308,16 @@ class PackageCreator
     /**
      * Create the main source directory for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $directory
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $directory
+     *
      * @return string
      */
     protected function createClassDirectory(Package $package, $directory)
     {
         $path = $directory.'/src/'.$package->vendor.'/'.$package->name;
 
-        if (! $this->files->isDirectory($path)) {
+        if (!$this->files->isDirectory($path)) {
             $this->files->makeDirectory($path, 0777, true);
         }
 
@@ -333,8 +327,9 @@ class PackageCreator
     /**
      * Format a generic package stub file.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $stub
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $stub
+     *
      * @return string
      */
     protected function formatPackageStub(Package $package, $stub)
@@ -349,8 +344,9 @@ class PackageCreator
     /**
      * Create a workbench directory for the package.
      *
-     * @param  \Illuminate\Workbench\Package  $package
-     * @param  string  $path
+     * @param \Illuminate\Workbench\Package $package
+     * @param string                        $path
+     *
      * @return string
      *
      * @throws \InvalidArgumentException
@@ -362,12 +358,12 @@ class PackageCreator
         // If the directory doesn't exist, we will go ahead and create the package
         // directory in the workbench location. We will use this entire package
         // name when creating the directory to avoid any potential conflicts.
-        if (! $this->files->isDirectory($fullPath)) {
+        if (!$this->files->isDirectory($fullPath)) {
             $this->files->makeDirectory($fullPath, 0777, true);
 
             return $fullPath;
         }
 
-        throw new \InvalidArgumentException("Package exists.");
+        throw new \InvalidArgumentException('Package exists.');
     }
 }

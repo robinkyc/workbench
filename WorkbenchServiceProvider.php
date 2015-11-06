@@ -1,11 +1,12 @@
-<?php namespace Pingpong\Workbench;
+<?php
+
+namespace Pingpong\Workbench;
 
 use Illuminate\Support\ServiceProvider;
 use Pingpong\Workbench\Console\WorkbenchMakeCommand;
 
 class WorkbenchServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -15,15 +16,13 @@ class WorkbenchServiceProvider extends ServiceProvider
 
     /**
      * Boot the package.
-     *
-     * @return void
      */
     public function boot()
     {
         $path = config_path('workbench.php');
 
         $this->publishes([
-            __DIR__ . '/config.php' => $path
+            __DIR__.'/config.php' => $path,
         ], 'config');
 
         if (file_exists($path)) {
@@ -33,8 +32,6 @@ class WorkbenchServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {
