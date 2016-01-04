@@ -57,4 +57,4 @@ php artisan workbench vendor/package --resources
 
 ### Other Documentation
 
-> For more documentation you can visit [the official laravel documentation](http://laravel.com/docs/5.1/packages)
+> For more documentation you can visit [the official laravel documentation](http://laravel.com/docs/5.2/packages)
