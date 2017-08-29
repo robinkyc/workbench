@@ -1,5 +1,12 @@
 # Laravel 5 Workbench
 
+### Version Compability
+
+| Laravel Version | Workbench Version |
+|-----------------|-------------------|
+| 5.2.*           | 5.2.*             |
+| 5.3.*           | 5.3.*             |
+
 ### Installation
 
 You can install the package via composer command line by running this following command.
