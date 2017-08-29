@@ -14,11 +14,11 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/filesystem": "5.3.*",
-        "illuminate/support": "5.3.*"
+        "illuminate/filesystem": "5.4.*",
+        "illuminate/support": "5.4.*"
     },
     "require-dev": {
-        "illuminate/console": "5.3.*"
+        "illuminate/console": "5.4.*"
     },
     "autoload": {
         "psr-4": {
