@@ -41,9 +41,8 @@ You can autoload the workbench by adding this following command to your `bootstr
 | auto-load files for the packages so that these can be used here.
 |
 */
-if (is_dir($workbench = __DIR__.'/../workbench'))
-{
-	Pingpong\Workbench\Starter::start($workbench);
+if (is_dir($workbench = __DIR__.'/../workbench')) {
+    Pingpong\Workbench\Starter::start($workbench);
 }
 ```
 
